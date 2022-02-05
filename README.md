@@ -23,6 +23,8 @@ To achieve this, there are four different components in this app:
 ## Usage
 This app is intended to be the base project on top of which new features can be added. To use it, clone the project and import it using the following steps:
 
+![Imgur](http://i.imgur.com/joPKoTk.gif)
+
 <img src= http://g.recordit.co/HG62S00T61.gif width=250><br>
 
 ## Suggested Extensions
