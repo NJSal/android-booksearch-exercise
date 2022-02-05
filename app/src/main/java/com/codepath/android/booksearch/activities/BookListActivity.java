@@ -1,5 +1,4 @@
 package com.codepath.android.booksearch.activities;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +32,20 @@ public class BookListActivity extends AppCompatActivity {
     private BookClient client;
     private ArrayList<Book> abooks;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_book_list);
+
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
+    }
+
+
+    /***
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +89,7 @@ public class BookListActivity extends AppCompatActivity {
         // Fetch the data remotely
         fetchBooks("Oscar Wilde");
     }
+    ****/
 
     // Executes an API call to the OpenLibrary search endpoint, parses the results
     // Converts them into an array of book objects and adds them to the adapter
@@ -113,7 +128,14 @@ public class BookListActivity extends AppCompatActivity {
             }
         });
     }
-
+    // Menu icons are inflated just as they were with actionbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_book_list, menu);
+        return true;
+    }
+    /***
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -127,6 +149,7 @@ public class BookListActivity extends AppCompatActivity {
         // see https://guides.codepath.org/android/Handling-ProgressBars#progress-within-actionbar
         return true;
     }
+    ***/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
