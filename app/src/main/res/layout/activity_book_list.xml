@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleTextColor="@android:color/white"
-        android:background="#FF0000"/>
+        android:background="#FF0000"
+        />
     <!--android:background="?attr/colorPrimary"/>-->
 
     <androidx.recyclerview.widget.RecyclerView
