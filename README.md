@@ -25,7 +25,7 @@ This app is intended to be the base project on top of which new features can be 
 
 ![Imgur](http://i.imgur.com/joPKoTk.gif)
 
-<img src= http://g.recordit.co/HG62S00T61.gif width=250><br>
+<img src= http://g.recordit.co/oVz7DTPNo3.gif width=250><br>
 
 ## Suggested Extensions
 
